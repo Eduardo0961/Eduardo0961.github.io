@@ -8023,7 +8023,185 @@ a.anchor-link {
     .jp-MarkdownCell { padding: 42px 0 !important; }
     table { display: block; overflow-x: auto; }
   }
-</style></head>
+</style>
+<style id="light-theme-overrides">
+  /* Light theme override for the NFL MVP design */
+  :root {
+    --bg: #f7f8fb !important;
+    --surface: #ffffff !important;
+    --surface2: #eef2f7 !important;
+    --border: #d8dee9 !important;
+    --gold: #b98500 !important;
+    --gold-dim: #8f6d00 !important;
+    --text: #1f2937 !important;
+    --text-dim: #5f6f87 !important;
+    --accent: #2563eb !important;
+    --jp-layout-color0: #f7f8fb !important;
+    --jp-layout-color1: #f7f8fb !important;
+    --jp-layout-color2: #ffffff !important;
+    --jp-layout-color3: #eef2f7 !important;
+    --jp-cell-editor-background: #ffffff !important;
+    --jp-cell-editor-border-color: #d8dee9 !important;
+    --jp-rendermime-error-background: #fff3f3 !important;
+    --jp-rendermime-table-row-background: #f1f4f9 !important;
+    --jp-rendermime-table-row-hover-background: #e8edf6 !important;
+  }
+
+  html, body,
+  body.jp-Notebook,
+  .jp-Notebook {
+    background: var(--bg) !important;
+    color: var(--text) !important;
+  }
+
+  .hero {
+    background:
+      radial-gradient(circle at 82% 12%, rgba(185,133,0,0.14) 0, rgba(185,133,0,0) 28%),
+      linear-gradient(135deg, #ffffff 0%, #f4f6fb 58%, #eef2f7 100%) !important;
+    border-bottom: 1px solid var(--border) !important;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  }
+
+  .hero::before {
+    color: rgba(185, 133, 0, 0.075) !important;
+  }
+
+  .hero h1,
+  h1, h2, h3, h4,
+  .jp-RenderedHTMLCommon h1,
+  .jp-RenderedHTMLCommon h2,
+  .jp-RenderedHTMLCommon h3,
+  .jp-RenderedHTMLCommon h4 {
+    color: #111827 !important;
+  }
+
+  .hero h1 span,
+  .section-label,
+  .hero-badge,
+  .jp-RenderedHTMLCommon a,
+  a {
+    color: var(--gold) !important;
+  }
+
+  .hero-badge {
+    background: rgba(185, 133, 0, 0.08) !important;
+    border-color: rgba(185, 133, 0, 0.38) !important;
+  }
+
+  .hero-meta,
+  .hero-meta strong,
+  .jp-RenderedHTMLCommon,
+  .jp-RenderedHTMLCommon p,
+  .jp-RenderedHTMLCommon li,
+  .jp-RenderedHTMLCommon td,
+  .jp-RenderedHTMLCommon th,
+  p, li, td, th {
+    color: var(--text) !important;
+  }
+
+  .hero-meta,
+  .jp-RenderedHTMLCommon em,
+  .text-dim {
+    color: var(--text-dim) !important;
+  }
+
+  main,
+  .container {
+    background: transparent !important;
+  }
+
+  .jp-MarkdownCell,
+  section {
+    border-bottom: 1px solid var(--border) !important;
+  }
+
+  table,
+  .jp-RenderedHTMLCommon table {
+    background: var(--surface) !important;
+    color: var(--text) !important;
+    border: 1px solid var(--border) !important;
+    border-collapse: collapse !important;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.05);
+  }
+
+  thead,
+  .jp-RenderedHTMLCommon thead,
+  table th,
+  .jp-RenderedHTMLCommon table th {
+    background: #e9edf5 !important;
+    color: var(--gold) !important;
+    border-bottom: 1px solid var(--border) !important;
+  }
+
+  table td,
+  .jp-RenderedHTMLCommon table td {
+    border-bottom: 1px solid var(--border) !important;
+    color: var(--text) !important;
+    background: transparent !important;
+  }
+
+  tbody tr,
+  .jp-RenderedHTMLCommon tbody tr,
+  .jp-RenderedHTMLCommon tbody tr:nth-child(odd),
+  .jp-RenderedHTMLCommon tbody tr:nth-child(even) {
+    background: var(--surface) !important;
+  }
+
+  tbody tr:nth-child(even),
+  .jp-RenderedHTMLCommon tbody tr:nth-child(even) {
+    background: #f1f4f9 !important;
+  }
+
+  tbody tr:hover,
+  .jp-RenderedHTMLCommon tbody tr:hover {
+    background: #e8edf6 !important;
+  }
+
+  tbody tr:hover td,
+  .jp-RenderedHTMLCommon tbody tr:hover td {
+    background: transparent !important;
+  }
+
+  strong,
+  .name,
+  .jp-RenderedHTMLCommon strong {
+    color: #111827 !important;
+  }
+
+  code,
+  pre,
+  .highlight,
+  .jp-InputArea-editor,
+  .jp-OutputArea-output,
+  .jp-RenderedHTMLCommon pre {
+    background: #ffffff !important;
+    color: #172033 !important;
+    border-color: var(--border) !important;
+  }
+
+  blockquote,
+  .jp-RenderedHTMLCommon blockquote {
+    background: #ffffff !important;
+    border-left: 4px solid var(--gold) !important;
+    color: var(--text) !important;
+  }
+
+  footer {
+    background: #ffffff !important;
+    color: var(--text-dim) !important;
+    border-top: 1px solid var(--border) !important;
+  }
+
+  /* Fix contribution table names on light background */
+  tbody tr td:first-child,
+  .jp-RenderedHTMLCommon tbody tr td:first-child {
+    color: #111827 !important;
+    font-weight: 700 !important;
+    white-space: nowrap;
+  }
+
+</style>
+</head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light"><div class="hero">
 <div class="container">
 <div class="hero-badge">CMSC 320 · Spring 2026 · Final Project</div>
