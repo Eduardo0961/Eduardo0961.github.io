@@ -8196,6 +8196,22 @@ a.anchor-link {
     border-color: var(--border) !important;
   }
 
+  .highlight,
+  .jp-CodeCell .jp-InputArea-editor,
+  .jp-RenderedHTMLCommon pre {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: auto !important;
+  }
+
+  .highlight pre {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: pre-wrap !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word;
+  }
+
   blockquote,
   .jp-RenderedHTMLCommon blockquote {
     background: #ffffff !important;
