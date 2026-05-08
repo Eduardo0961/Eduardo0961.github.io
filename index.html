@@ -7942,14 +7942,31 @@ a.anchor-link {
   hr { border: 0; border-top: 1px solid var(--border); margin: 32px 0; }
 
   /* TABLES */
-  table {
-    width: 100% !important;
-    border-collapse: collapse !important;
+  .table-scroll-wrapper,
+  .colab-df-container,
+  .jp-RenderedHTMLCommon.jp-OutputArea-output {
+    display: block !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table-scroll-wrapper {
     margin: 24px 0 !important;
-    font-size: 14px !important;
-    background: transparent !important;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+
+  table {
+      min-width: max-content !important;  /* ← change from width: 100% */
+      border-collapse: collapse !important;
+      margin: 0 !important;
+      font-size: 14px !important;
+      background: transparent !important;
   }
   th {
+    white-space: nowrap;
     background: var(--surface2) !important;
     color: var(--gold) !important;
     font-family: var(--mono) !important;
@@ -7962,6 +7979,7 @@ a.anchor-link {
     border-bottom: 1px solid var(--border) !important;
   }
   td {
+    white-space: nowrap;
     padding: 14px 16px !important;
     border: 0 !important;
     border-bottom: 1px solid var(--border) !important;
@@ -8018,10 +8036,9 @@ a.anchor-link {
   .reveal.visible { opacity: 1; transform: none; }
 
   @media (max-width: 700px) {
-    .hero { padding: 58px 22px 42px; }
-    .container, main { padding: 0 20px; }
-    .jp-MarkdownCell { padding: 42px 0 !important; }
-    table { display: block; overflow-x: auto; }
+      .hero { padding: 58px 22px 42px; }
+      .container, main { padding: 0 20px; }
+      .jp-MarkdownCell { padding: 42px 0 !important; }
   }
 </style>
 <style id="light-theme-overrides">
@@ -10969,5 +10986,17 @@ That is really the central lesson here. Stats matter, but context matters more. 
     });
   }, { threshold: 0.08 });
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+<script>
+  document.querySelectorAll('table').forEach(function(table) {
+    if (!table.parentNode.classList.contains('table-scroll-wrapper')) {
+      var wrapper = document.createElement('div');
+      wrapper.classList.add('table-scroll-wrapper');
+      wrapper.style.overflowX = 'auto';
+      wrapper.style.width = '100%';
+      table.parentNode.insertBefore(wrapper, table);
+      wrapper.appendChild(table);
+    }
+  });
 </script></body>
 </html>
