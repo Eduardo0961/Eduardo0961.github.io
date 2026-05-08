@@ -8217,6 +8217,36 @@ a.anchor-link {
     white-space: nowrap;
   }
 
+  #Contributions + .table-scroll-wrapper table,
+  #Contributions + table {
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed !important;
+  }
+
+  #Contributions + .table-scroll-wrapper th:first-child,
+  #Contributions + .table-scroll-wrapper td:first-child,
+  #Contributions + table th:first-child,
+  #Contributions + table td:first-child {
+    width: 170px;
+  }
+
+  #Contributions + .table-scroll-wrapper th:nth-child(2),
+  #Contributions + .table-scroll-wrapper td:nth-child(2),
+  #Contributions + table th:nth-child(2),
+  #Contributions + table td:nth-child(2) {
+    width: 110px;
+  }
+
+  #Contributions + .table-scroll-wrapper th:nth-child(3),
+  #Contributions + .table-scroll-wrapper td:nth-child(3),
+  #Contributions + table th:nth-child(3),
+  #Contributions + table td:nth-child(3) {
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    line-height: 1.55;
+  }
+
 </style>
 </head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light"><div class="hero">
@@ -8254,7 +8284,7 @@ a.anchor-link {
 <tr>
 <td>Eduardo Henry</td>
 <td>A, B, G</td>
-<td>Proposed the NFL MVP prediction idea and led dataset curation; loaded and cleaned the player stats and team stats CSVs into a SQLite database. Also coordinated the final tutorial write-up and GitHub Pages deployment.</td>
+<td>Proposed the NFL MVP prediction idea and led dataset curation;loaded and cleaned the player stats and team stats CSVs into a SQLite database. Also coordinated the final tutorial write-up and GitHub Pages deployment.</td>
 </tr>
 <tr>
 <td>Kamdi Nwakibu</td>
